@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentVolSet">
+
+    <Button
+        android:id="@+id/btnVolRead"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/btnRead"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnVolWrite"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btnWrite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnVolRead" />
+
+    <RadioGroup
+        android:id="@+id/rdGpDev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@id/rdSrc"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/txvVolSetTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txvVolSetTitle">
+
+        <RadioButton
+            android:id="@+id/rdSrc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txvDevSrc" />
+
+        <RadioButton
+            android:id="@+id/rdHfpAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txvDevAllHfp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txvVolSetTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txvVolumeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rdGpMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:checkedButton="@id/rdModeVcs"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/rdGpDev"
+        app:layout_constraintTop_toBottomOf="@+id/rdGpDev">
+
+        <RadioButton
+            android:id="@+id/rdModeWire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txvModeWired" />
+
+        <RadioButton
+            android:id="@+id/rdModeUsb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txvModeUsb" />
+
+        <RadioButton
+            android:id="@+id/rdModeBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txvModeBt" />
+
+        <RadioButton
+            android:id="@+id/rdModeVcs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/txvModeVcs" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/chkSrcHfpSpkrDecade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txvDecadeSpkrHfp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <CheckBox
+        android:id="@+id/chkSrcAvSpkrDecade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:text="@string/txvDecadeSpkrAv"
+        app:layout_constraintStart_toStartOf="@+id/chkSrcHfpSpkrDecade"
+        app:layout_constraintTop_toTopOf="@+id/chkSrcHfpSpkrDecade" />
+
+    <SeekBar
+        android:id="@+id/seekSrcHfpSpkrVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/chkSrcHfpSpkrDecade"
+        app:layout_constraintTop_toBottomOf="@+id/chkSrcHfpSpkrDecade" />
+
+    <SeekBar
+        android:id="@+id/seekSrcHfpMicVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/chkSrcHfpSpkrDecade"
+        app:layout_constraintTop_toBottomOf="@+id/seekSrcHfpSpkrVol" />
+
+    <SeekBar
+        android:id="@+id/seekSrcAvSpkrVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/chkSrcAvSpkrDecade"
+        app:layout_constraintTop_toBottomOf="@+id/chkSrcAvSpkrDecade" />
+
+    <SeekBar
+        android:id="@+id/seekAgHfpSpkrVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/seekSrcHfpMicVol"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <SeekBar
+        android:id="@+id/seekAgHfpMicVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/seekAgHfpSpkrVol"
+        app:layout_constraintTop_toBottomOf="@+id/seekAgHfpSpkrVol" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txvVolumeSrc"
+        app:layout_constraintTop_toBottomOf="@+id/rdGpMode"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/txvVolumeAg"
+        app:layout_constraintStart_toStartOf="@+id/seekSrcHfpMicVol"
+        app:layout_constraintTop_toBottomOf="@+id/seekSrcHfpMicVol" />
+
+    <SeekBar
+        android:id="@+id/seekAgAvSpkrVol"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="168dp"
+        android:layout_height="16dp"
+        android:max="15"
+        android:progress="3"
+        app:layout_constraintStart_toStartOf="@+id/seekSrcAvSpkrVol"
+        app:layout_constraintTop_toTopOf="@+id/seekAgHfpSpkrVol" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

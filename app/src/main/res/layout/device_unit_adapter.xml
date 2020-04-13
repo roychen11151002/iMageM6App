@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvDeviceName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="A6"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgViewStaCon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:background="#DFD581"
+        app:layout_constraintStart_toEndOf="@+id/imgViewIcon"
+        app:layout_constraintTop_toTopOf="@+id/imgViewIcon"
+        app:srcCompat="@android:drawable/sym_action_call" />
+
+    <SeekBar
+        android:id="@+id/seekVolSpkr"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="116dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="4dp"
+        android:max="15"
+        android:progress="10"
+        app:layout_constraintBottom_toBottomOf="@+id/imgViewMuSpkr"
+        app:layout_constraintStart_toEndOf="@+id/imgViewMuSpkr" />
+
+    <ImageView
+        android:id="@+id/imgViewMuMic"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintStart_toStartOf="@+id/imgViewIcon"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewIcon"
+        app:srcCompat="@android:drawable/presence_audio_online" />
+
+    <ImageView
+        android:id="@+id/imgViewMuSpkr"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:background="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/imgViewMuMic"
+        app:layout_constraintTop_toBottomOf="@+id/imgViewMuMic"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+    <SeekBar
+        android:id="@+id/seekVolMic"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="116dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:max="15"
+        android:progress="15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgViewMuMic"
+        app:layout_constraintTop_toTopOf="@+id/imgViewMuMic" />
+
+    <ImageView
+        android:id="@+id/imgViewIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvDeviceName"
+        app:srcCompat="@drawable/android_image_1" />
+
+    <TextView
+        android:id="@+id/txvBat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txvStaBat"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/imgViewIcon"
+        app:layout_constraintTop_toTopOf="@+id/imgViewIcon" />
+
+    <TextView
+        android:id="@+id/txvRssi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txvStaRssi"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgViewIcon"
+        app:layout_constraintStart_toEndOf="@+id/imgViewIcon" />
+</androidx.constraintlayout.widget.ConstraintLayout>

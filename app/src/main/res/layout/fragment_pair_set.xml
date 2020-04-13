@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".FragmentPairSet">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/txvPairTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/txvRecyclerTitle"
+        app:layout_constraintStart_toStartOf="@+id/btnPair"
+        app:layout_constraintTop_toBottomOf="@+id/btnPair" />
+
+    <Button
+        android:id="@+id/btnPair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/btnPair"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnDiscovery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/btnDiscovery"
+        app:layout_constraintStart_toEndOf="@+id/btnPair"
+        app:layout_constraintTop_toTopOf="@+id/btnPair" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerListPair"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPairTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
